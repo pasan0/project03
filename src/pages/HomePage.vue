@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="fullscreen">
     <q-layout view="lHh Lpr lFf">
       <q-toolbar class="bg-blue-10 text-white shadow-2" style="height: 80%;">
         <q-btn flat round dense icon="menu" class="q-mr-sm" />
@@ -8,12 +8,17 @@
         <q-space />
 
         <q-separator dark vertical />
-        <!-- Use router-link to navigate to the About page -->
+
+        <router-link to="home" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
+          <q-btn @click="navigate" stretch flat label="Home" />
+        </router-link>
+        <q-separator dark vertical />
+
         <router-link to="/about" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
           <q-btn @click="navigate" stretch flat label="About" />
         </router-link>
         <q-separator dark vertical />
-        <!-- Use router-link to navigate to the Contact page -->
+
         <router-link to="/contact" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
           <q-btn @click="navigate" stretch flat label="Contact" />
         </router-link>
