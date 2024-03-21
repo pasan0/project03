@@ -2,7 +2,6 @@
   <div class="page-container">
     <q-layout view="lHh Lpr lFf">
       <q-toolbar class="bg-blue-10 text-white shadow-2" style="height: 80%;">
-        <q-btn flat round dense icon="menu" class="q-mr-sm" />
         <q-separator dark vertical inset />
 
         <q-space />
@@ -25,32 +24,38 @@
       </q-toolbar>
       <q-page-container>
         <q-page class="q-pa-md">
-          <div class="row q-gutter-md" style="background: aliceblue;">
+          <div class="row q-gutter-md" style="background: aliceblue; position: relative;">
             <div class="col-md-8 mainheader">
               <h1>Welcome to PK Blog site</h1>
               <p>Stay updated with the latest news from PK BLOGGERS..!</p>
             </div>
-            <div class="col-md-3 d-flex justify-end">
-              <img src="../assets/pki.jpg" style="width: 60%;" />
+            <div class="col-md-3 d-flex justify-end" style="position: relative;">
+              <img src="../assets/pki.jpg" style="width: 60%; position: relative;" />
             </div>
           </div>
           <div class="row1">
             <div class="col-md-4 d-flex flex-column align-center" style="margin-top: 10px;">
               <div class="image-container">
                 <q-img src="../assets/col1.jpg" style="width: 100%;" />
-                <q-btn class="q-mt-md go-to-button" label="TECHNOLOGY" />
+                <router-link to="/technology" style="text-decoration: none;" v-slot="{ navigate }">
+                  <q-btn class="q-mt-md go-to-button" @click="navigate" stretch flat label="TECHNOLOGY" />
+                </router-link>
               </div>
             </div>
             <div class="col-md-4 d-flex flex-column align-center" style="margin-top: 10px;">
               <div class="image-container">
                 <q-img src="../assets/col2.jpg" style="width: 100%; height: 110%;" />
-                <q-btn class="q-mt-md go-to-button" label="SPORTS" />
+                <router-link to="/sports" style="text-decoration: none;" v-slot="{ navigate }">
+                  <q-btn class="q-mt-md go-to-button" @click="navigate" stretch flat label="SPORTS" />
+                </router-link>
               </div>
             </div>
             <div class="col-md-4 d-flex flex-column align-center" style="margin-top: 10px;">
               <div class="image-container">
                 <q-img src="../assets/col3.jpg" style="width: 100%;" />
-                <q-btn class="q-mt-md go-to-button" label="MOVIES" />
+                <router-link to="/movies" style="text-decoration: none;" v-slot="{ navigate }">
+                  <q-btn class="q-mt-md go-to-button" @click="navigate" stretch flat label="MOVIES" />
+                </router-link>
               </div>
             </div>
           </div>
