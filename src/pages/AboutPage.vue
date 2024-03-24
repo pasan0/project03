@@ -28,9 +28,15 @@
           <div class="q-gutter-md">
             <div class="q-col-gutter-md">
               <div class="text-h6 bg-blue-10 text-white p-2">About Us</div>
-              <div class="bg-blue-10 text-white p-2 ml-10">Welcome to our blog site! We aim to provide informative and engaging content in the technology field.</div>
+              <div class="bg-blue-10 text-white p-2 ml-10">
+                <div>
+              <img src="../assets/OIG3..jpg" style="align-items: center; width: 20%; ">
+            </div>
+                Welcome to our
+                <span style="font-weight: bold; font-size: 18px;">PK BLOG SITE..!</span>  We aim to provide informative and engaging content in the technology, sport & movies field.</div>
               <div class="bg-blue-10 text-white p-2 ml-10">Our team is dedicated to delivering high-quality articles, tutorials, and news updates to keep you informed about the latest trends and developments in technology.</div>
               <div class="bg-blue-10 text-white p-2 ml-10">Feel free to explore our site and discover a wealth of valuable information to enhance your knowledge and stay up-to-date with the rapidly evolving world of technology.</div>
+
             </div>
           </div>
         </q-page>

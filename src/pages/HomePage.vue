@@ -1,36 +1,44 @@
 <template>
   <div class="page-container">
     <q-layout view="lHh Lpr lFf">
-      <q-toolbar class="bg-blue-10 text-white shadow-2" style="height: 80%;">
+      <q-toolbar class="bg-blue-10 text-white shadow-2" style="height: 80%; display: flex; width: 100%;">
         <q-separator dark vertical inset />
 
         <q-space />
 
         <q-separator dark vertical />
 
-        <router-link to="home" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
-          <q-btn @click="navigate" stretch flat label="Home" />
+        <router-link to="home" class="text-white" style="text-decoration: none;" v-slot="{ navigate }" >
+          <q-btn @click="navigate" stretch flat label="Home" icon="home" />
         </router-link>
         <q-separator dark vertical />
 
         <router-link to="/about" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
-          <q-btn @click="navigate" stretch flat label="About" />
+          <q-btn @click="navigate" stretch flat label="About" icon="info" />
         </router-link>
         <q-separator dark vertical />
 
         <router-link to="/contact" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
-          <q-btn @click="navigate" stretch flat label="Contact" />
+          <q-btn @click="navigate" stretch flat label="Contact" icon="call"/>
         </router-link>
       </q-toolbar>
       <q-page-container>
-        <q-page class="q-pa-md">
-          <div class="row q-gutter-md" style="background: aliceblue; position: relative;">
-            <div class="col-md-8 mainheader">
-              <h1>Welcome to PK Blog site</h1>
-              <p>Stay updated with the latest news from PK BLOGGERS..!</p>
-            </div>
-            <div class="col-md-3 d-flex justify-end" style="position: relative;">
-              <img src="../assets/pki.jpg" style="width: 60%; position: relative;" />
+        <q-page class="q-pa-md" style="margin: 0px;">
+          <div class="row q-gutter-md" style="background: #dfeefb; display: flex;justify-content: center;">
+
+            <div class="parent" style="display: flex; align-items: center; width: 100%;">
+
+              <div class="text" style="width: 75%;">
+
+                <h1><span style="font-weight: 400;">Welcome to</span> <span style="font-size: 55px; ">PK Blog site</span></h1>
+                <p style="font-size: 18px;font-style: italic;color: #5d2020;">Stay updated with the latest news from PK BLOGGERS..!</p>
+              </div>
+
+              <div class="image" style="justify-content: center;display: flex; width: 25%;">
+
+                <img src="../assets/pki.jpg" style="width: 40%; padding: 0; margin: 0;">
+              </div>
+
             </div>
           </div>
           <div class="row1">
@@ -38,7 +46,7 @@
               <div class="image-container">
                 <q-img src="../assets/col1.jpg" style="width: 100%;" />
                 <router-link to="/technology" style="text-decoration: none;" v-slot="{ navigate }">
-                  <q-btn class="q-mt-md go-to-button" @click="navigate" stretch flat label="TECHNOLOGY" />
+                  <q-btn class="q-mt-md go-to-button" @click="navigate" stretch flat label="TECHNOLOGY" icon="biotech" />
                 </router-link>
               </div>
             </div>
@@ -46,7 +54,7 @@
               <div class="image-container">
                 <q-img src="../assets/col2.jpg" style="width: 100%; height: 110%;" />
                 <router-link to="/sports" style="text-decoration: none;" v-slot="{ navigate }">
-                  <q-btn class="q-mt-md go-to-button" @click="navigate" stretch flat label="SPORTS" />
+                  <q-btn class="q-mt-md go-to-button" @click="navigate" stretch flat label="SPORTS" icon="sports_soccer" />
                 </router-link>
               </div>
             </div>
@@ -54,7 +62,7 @@
               <div class="image-container">
                 <q-img src="../assets/col3.jpg" style="width: 100%;" />
                 <router-link to="/movies" style="text-decoration: none;" v-slot="{ navigate }">
-                  <q-btn class="q-mt-md go-to-button" @click="navigate" stretch flat label="MOVIES" />
+                  <q-btn class="q-mt-md go-to-button" @click="navigate" stretch flat label="MOVIES" icon="theaters"/>
                 </router-link>
               </div>
             </div>
@@ -72,10 +80,7 @@ defineOptions({
 </script>
 
 <style>
-.page-container {
-  margin: 0 auto; /* Center the container horizontally */
-  max-width: 1200px; /* Set a maximum width for the container */
-}
+
 
 h1 {
   color: rgb(30, 58, 148);
